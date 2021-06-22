@@ -1,15 +1,7 @@
-import React from 'react';
+import { ButtonHTMLAttributes } from 'react';
+import '../styles/button.scss';
+type buttonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
-type ButtonProps = {
-  text?: string;
+export const Button = (props: buttonProps) => {
+  return <button className="button" {...props}></button>;
 };
-
-const Button = (props: ButtonProps) => {
-  return (
-    <button>
-      <a href="./">{props.text}</a>
-    </button>
-  );
-};
-
-export default Button;
